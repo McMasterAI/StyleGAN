@@ -18,3 +18,44 @@ This project uses the following tools:
 
 ## Packages
 TBA
+
+## Making a Virtual Environment
+For this project, we will be using a virtual environment with the same packages and same package versions across machines, to prevent any issues with different packages or package versions being on each person's machine. To do this, we have a number of steps to go through:
+
+- Python 3 already comes with virtual environments available, so there is no need to install a new pip package for it. There is more explicit documentation [in the python docs page](https://docs.python.org/3/library/venv.html), but this will hopefully provide a quick summary to that. You will want to first to create a new virtual environment at a chosen location, the last part of the path being the venv name:
+    ```  
+    python -m venv <venv path>
+    ```  
+    An example of the above could be making a new venv named `newVEnv` (Mac formatting):
+    ```
+    python -m venv Desktop/myVEnvs/newVEnv
+    ```
+- Entering your virtual environment depends on the shell you are using. All possible shells are given in the documentation, but for rule of thumb, if you are on windows, you will need to type: 
+    ```
+    <venv path>\Scripts\activate.bat
+    ``` 
+    Alternatively, if you are on a Mac/Linux machine, you will want to use:
+    ```
+    source <venv path>/bin/activate
+    ```
+    You will know your are in your virtual environment when your input line of your shell starts with your virtual environment name
+- To leave a virtual environment, just type `deactivate`
+
+## Installing Necessary Packages and Adding it to Jupyter Notebooks
+As stated, we will now install some standardized packages into our virtual environments to use when working on this project, and will also make it available to use within our Jupyter Notebooks:
+
+1. Install the pip package `ipykernel` on your machine (not in a virtual environment) using the command:
+    ```
+    pip install ipykernel
+    ```
+2. Create a new virtual environment with any name, and enter it using the notes above
+3. Navigate to this folder on your machine, and install the project packages onto your virtual environment using the following command:
+    ```
+    pip install -r requirements.txt
+    ```
+4. Leave your virtual environment using the `deactivate` command
+5. Add your virtual environment to Jupyter using the following command:
+    ```
+    python -m ipykernel install --name=<venv name>
+    ```
+6. To confirm this worked, launch `jupyter notebook`, at the top right click `New`, and your virtual environment name should be under the list of notebooks, under `Python 3`
