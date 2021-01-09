@@ -1,4 +1,4 @@
-ipykernel
+ipykernel==5.4.2
 keras==2.4.0
 matplotlib==3.3.0
 numpy==1.19.1
