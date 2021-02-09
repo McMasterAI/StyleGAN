@@ -1,5 +1,6 @@
 h5py==2.10.0
 ipykernel==5.4.2
+kaggle==1.5.10
 keras==2.4.0
 matplotlib==3.3.0
 numpy==1.19.2
