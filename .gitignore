@@ -130,7 +130,6 @@ dmypy.json
 
 # Image folders and output data
 imgdata
-imgtest
 dataoutput
 testoutput
 training_1
