@@ -128,4 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Image folders and output data
 imgdata
+dataoutput
+testoutput
+training_1
+*.csv
