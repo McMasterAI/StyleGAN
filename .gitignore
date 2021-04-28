@@ -134,3 +134,4 @@ dataoutput
 testoutput
 training_1
 *.csv
+.DS_Store
